@@ -8,6 +8,7 @@ import { filter, map} from "rxjs/operators"
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy {
+   //should always store our subscription in a property so we can unsubscribe and prevent memory leaks using OnDestroy
   private firstObsSubscription: Subscription;
   constructor() { }
 

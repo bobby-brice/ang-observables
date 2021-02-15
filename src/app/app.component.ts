@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 export class AppComponent implements OnInit, OnDestroy {
   userActivated = false;
   private activatedSub: Subscription;
+  //should always store our subscription in a property so we can unsubscribe and prevent memory leaks using OnDestroy
 
   constructor(private userService: UserService) {}
   ngOnDestroy(): void {
